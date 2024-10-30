@@ -309,6 +309,11 @@ td.highlight {
 table tr:nth-child(even) td {
     background-color: #c8d7ff27;
 }
+.calc-content {
+    display: flex
+    ;justify-content: space-around
+    ;align-items: center;
+}
 .calc-input-div {
     max-width: 500px; /* Limit the width of the input div */
     margin: 20px ; /* Center the div horizontally */
@@ -610,10 +615,10 @@ footer p{
         width: 90%;
         margin: 20px auto;
     }
-    .cal-content {
+    .calc-content {
         display: block !important;
     }
-    .cal-content img{
+    .calc-content img{
         width: auto !important;
     }
 }
