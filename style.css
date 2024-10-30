@@ -75,7 +75,7 @@ section#home {
     padding: 4rem;
     text-align: center;
     color: white; /* Text color for readability */
-    background-image: linear-gradient(rgba(19, 55, 202, 0.4), rgba(19, 55, 202, 0.625)), url('./img-1.jpg');
+    background-image: linear-gradient(rgba(19, 55, 202, 0.4), rgba(19, 55, 202, 0.625)), url('public/img-1.jpg');
     background-size: cover; /* Ensures the image covers the section */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
