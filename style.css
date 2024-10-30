@@ -1,624 +1,766 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header Styling */
-header {
-    background-color: #fff; /* White background */
-    color: #003366; /* Blue color for text */
-    padding: 1rem 0;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visibility */
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    height: 8.7vh;
-}
-
-/* Logo Styling */
-nav img {
-    width: 13vw; 
-    height: 12vh;
-    border-radius: 5px;
-    border: #7cb3cf 2px solid;
-}
-
-/* Navigation Links Styling */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #003366; /* Blue color matching the logo */
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #0055a5; /* Slightly lighter blue on hover */
-    text-decoration: underline;
-}
-
-
-/* Sections Styling */
-section {
-    padding: 2rem;
-    text-align: center;
-}
-
-section#home {
-    position: relative;
-    padding: 4rem;
-    text-align: center;
-    color: white; /* Text color for readability */
-    background-image: linear-gradient(rgba(19, 55, 202, 0.4), rgba(19, 55, 202, 0.625)), url('public/img-1.jpg');
-    background-size: cover; /* Ensures the image covers the section */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    margin: 10px auto; /* Center the section */
-
-}
-
-#home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1;
-}
-
-#home h1, #home h4, #home ul, #home button {
-    position: relative;
-    z-index: 2; /* Ensures content is above the overlay */
-}
-
-
-#home h1 {
-    font-size: 2rem;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-}
-
-#home h4 {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-}
-
-#home ul {
-    list-style-type: none; /* Removes default bullet points */
-    padding: 0;
-    text-align: center;
-    margin: 0 auto;
-    /* max-width: 600px; */
-}
-
-#home ul li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-#home ul li::before {
-    content: '•'; /* Custom bullet symbol */
-    color: #00aaff; /* Custom bullet color */
-    font-size: 1.2rem;
-    position: relative;
-    right: 10px;
-    top: 0;
-}
-
-#home ul li strong {
-    color: #00aaff; /* Color for key phrases */
-}
-
-#home button {
-    background-color: #00aaff;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1.5rem;
-    transition: background-color 0.3s ease;
-}
-
-#home button:hover {
-    background-color: #0088cc; /* Darker shade on hover */
-}
-#about {
-    background-color: #f4f4f4; /* Light gray background for a clean look */
-    padding: 40px 20px; /* Spacing around the content */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px auto; /* Center the section */
-    text-align: center; /* Removed background image and opacity settings */
-}
-
-#about h2 , #client-Feedback h2 , #faq h2{
-    font-size: 2rem; /* Increase heading size */
-    color: #003366;  /* Primary color for heading */
-    margin-bottom: 20px; /* Space below the heading */
-    font-weight: 600; /* Make the heading bolder */
-}
-
-p {
-    font-size: 1.05rem; /* Slightly larger font for readability */
-    color: #333; /* Dark gray color for the text */
-    line-height: 1.6; /* Improve line spacing */
-    margin-bottom: 0; /* Remove bottom margin */
-}
-
-/* Stats section styling */
-.stats-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #003366; /* Adjust color as needed */
-    padding: 20px;
-    color: white;
-    margin: 0 auto;
-    border-radius: 8px;
-}
-
-/* Individual stat box */
-.stat-box {
-    text-align: center;
-    flex: 1;
-}
-
-/* Icon styles */
-.stat-icon {
-    font-size: 30px;
-    margin-bottom: 10px;
-    display: block;
-}
-
-/* Text styles */
-.stat-text {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-#strategy {
-    background-color: #f9f9f9; /* Light background for contrast */
-    padding: 40px 20px; /* Spacing around the content */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px auto; /* Center the section and add top margin */
-    text-align: center; /* Align text to the center for better readability */
-}
-
-#strategy h2 {
-    font-size: 2rem; /* Size for main headings */
-    color: #003366;  /* Primary color for headings */
-    margin-bottom: 20px; /* Space below the heading */
-    font-weight: 600; /* Make the heading bolder */
-}
-
-.strategies {
-    margin-bottom: 30px; /* Space below the strategies section */
-}
-
-.strategies h3 {
-    font-size: 1.5rem; /* Size for the strategies heading */
-    color: #333; /* Dark color for subheadings */
-    margin-bottom: 10px; /* Space below the subheading */
-}
-
-.strategies ul {
-    list-style-type: disc; /* Bullet points for list */
-    padding-left: 20px;
-    /* Indent list items */
-}
-
-.strategies li {
-    font-size: 1.1rem; /* Font size for list items */
-    color: #555; /* Medium gray for list item text */
-    margin-bottom: 10px; /* Space between list items */
-}
-
-#strategy button {
-    background-color:#003366; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none; /* No border for button */
-    padding: 10px 20px; /* Padding inside button */
-    border-radius: 4px; /* Rounded corners for button */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-#strategy button:hover {
-    background-color: #0f1f9a; /* Darker shade on hover */
-}
-
-.table-container {
-    overflow-x: auto;
-    margin-top: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ccc;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-    font-size: 16px;
-}
-
-th {
-    background-color: #f9f9f9;
-    font-weight: bold;
-}
-
-td {
-    background-color: #ffffff;
-}
-
-th.company-header {
-    background-color: #cceeff; /* Light blue for company header */
-    color: #003366; /* Darker blue text for contrast */
-    font-weight: bold;
-}
-
-td.highlight {
-    background-color: #e6f7ff; /* Light blue for highlighting */
-    font-weight: bold;
-}
-
-
-table tr:nth-child(even) td {
-    background-color: #c8d7ff27;
-}
-.calc-content {
-    display: flex
-    ;justify-content: space-around
-    ;align-items: center;
-}
-.calc-input-div {
-    max-width: 500px; /* Limit the width of the input div */
-    margin: 20px ; /* Center the div horizontally */
-    padding: 20px;
-    border: 1px solid #ccc; /* Light border around the div */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    background-color: #f9f9f9; /* Light background color */
-}
-
-label {
-    display: block; /* Make label block elements */
-    margin-bottom: 5px; /* Space between label and input */
-    font-weight: bold; /* Bold labels */
-}
-
-.input-group {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between inputs */
-    align-items: center; /* Center align items vertically */
-    margin-bottom: 15px; /* Space between input groups */
-}
-
-input[type="number"] {
-    flex: 1; /* Allow inputs to grow */
-    padding: 10px; /* Padding inside inputs */
-    margin:0px 10px; /* Space between inputs */
-    border: 1px solid #ccc; /* Border around inputs */
-    border-radius: 5px; /* Rounded corners for inputs */
-}
-#result {
-    margin-top: 15px; /* Space above result paragraph */
-    font-size: 1.2em; /* Larger font for result */
-    font-weight: bold; /* Bold result text */
-}
-  /* Error message styling */
-  .result-error {
-    font-size: 0.8em !important;
-    font-weight: 400 !important;
-    color: red; /* Red color for error messages */
-}
-#client-Feedback,#faq {
-    text-align: center;
-    padding: 3em;
-    background-color: #f9f9f9; /* Light background for contrast */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px auto; /* Center the section and add top margin */
-   
-}
-
-/* Feedback card styling */
-.feedback-card {
-    display: none;
-    color: #003366;
-    font-size: 1.1em;
-    line-height: 1.6;
-    font-style: italic;
-    padding: 1.5em;
-    border-radius: 12px;
-    background-color: #f0f4f8;
-    margin: 0 auto;
-    max-width: 600px;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    opacity: 0;
-}
-
-.feedback-card.active {
-    display: block;
-    opacity: 1;
-    transform: scale(1.05);
-}
-
-.client-name {
-    margin-top: 1em;
-    color: #333;
-    font-weight: bold;
-    font-size: 1.15em;
-}
-
-/* Navigation arrows */
-.nav-arrows {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.arrow {
-    cursor: pointer;
-    font-size: 1.7em;
-    color: #003366;
-    pointer-events: all;
-    transition: color 0.3s ease;
-}
-
-.arrow:hover {
-    color: #0055b3;
-}
-
-.arrow-left {
-    left: -0.5em;
-}
-
-.arrow-right {
-    right: -0.5em;
-}
-.faq-item {
-    border-top: 1px solid #e0e0e0;
-    padding-top: 1rem;
-}
-
-.faq-item h3 {
-    color: #003366;
-    font-weight: bold;
-    text-align: left;
-}
-.faq-item p {
-    text-align: left;
-}
-
-/* Footer */
-/* footer {
-    background: #003366;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
-}
-footer p{
-    color: #ffff;
-} */
-
-#contact {
-    background-color: #003366;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer-heading {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    
-}
-.footer-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.footer-logo {
-    width: 17vw;
-    height: 25vh;
-    margin: 10px 0;
-    border-radius: 8px;
-}
-
-.footer-content {
-    max-width: 600px;
-    margin: auto;
-}
-
-#contact p {
-    margin: 5px 0;
-    font-size: 1.1em;
-    color: white;
-}
-/* Responsive Styling */
-@media (max-width: 768px) {
-    /* Adjust header and navigation for mobile */
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    /* Header Styling */
     header {
-        padding: 1rem;
+        background-color: #fff; /* White background */
+        color: #003366; /* Blue color for text */
+        padding: 1rem 0;
         text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visibility */
     }
 
     nav {
-        flex-direction: column;
-        padding: 1rem;
-        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        height: 8.7vh;
     }
 
+    /* Logo Styling */
     nav img {
-        width: 50vw;
-        height: auto;
-        margin-bottom: 1rem;
+        width: 13vw; 
+        height: 12vh;
+        border-radius: 5px;
+        border: #7cb3cf 2px solid;
     }
 
+    /* Navigation Links Styling */
     nav ul {
-        flex-direction: column;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
     }
 
     nav ul li {
-        margin: 0.5rem 0;
+        margin: 0 1rem;
+    }
+
+    nav ul li a {
+        color: #003366; /* Blue color matching the logo */
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        color: #0055a5; /* Slightly lighter blue on hover */
+        text-decoration: underline;
+    }
+
+
+    /* Sections Styling */
+    section {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    section#home {
+        position: relative;
+        padding: 4rem;
+        text-align: center;
+        color: white; /* Text color for readability */
+        background-image: linear-gradient(rgba(19, 55, 202, 0.4), rgba(19, 55, 202, 0.625)), url('public/img-1.jpg');
+        background-size: cover; /* Ensures the image covers the section */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents tiling */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+        border-radius: 8px; /* Rounded corners */
+        margin: 10px auto; /* Center the section */
+
+    }
+
+    #home::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+        z-index: 1;
+    }
+
+    #home h1, #home h4, #home ul, #home button {
+        position: relative;
+        z-index: 2; /* Ensures content is above the overlay */
+    }
+
+
+    #home h1 {
+        font-size: 2rem;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+    }
+
+    #home h4 {
+        font-size: 1.2rem;
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+    }
+
+    #home ul {
+        list-style-type: none; /* Removes default bullet points */
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+        /* max-width: 600px; */
+    }
+
+    #home ul li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    #home ul li::before {
+        content: '•'; /* Custom bullet symbol */
+        color: #00aaff; /* Custom bullet color */
+        font-size: 1.2rem;
+        position: relative;
+        right: 10px;
+        top: 0;
+    }
+
+    #home ul li strong {
+        color: #00aaff; /* Color for key phrases */
+    }
+
+    #home button {
+        background-color: #00aaff;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 1.5rem;
+        transition: background-color 0.3s ease;
+    }
+
+    #home button:hover {
+        background-color: #0088cc; /* Darker shade on hover */
+    }
+    #about {
+        background-color: #f4f4f4; /* Light gray background for a clean look */
+        padding: 40px 20px; /* Spacing around the content */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        margin: 20px auto; /* Center the section */
+        text-align: center; /* Removed background image and opacity settings */
+    }
+
+    #about h2 , #client-Feedback h2 , #faq h2{
+        font-size: 2rem; /* Increase heading size */
+        color: #003366;  /* Primary color for heading */
+        margin-bottom: 20px; /* Space below the heading */
+        font-weight: 600; /* Make the heading bolder */
+    }
+
+    p {
+        font-size: 1.05rem; /* Slightly larger font for readability */
+        color: #333; /* Dark gray color for the text */
+        line-height: 1.6; /* Improve line spacing */
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    /* Stats section styling */
+    .stats-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #003366; /* Adjust color as needed */
+        padding: 20px;
+        color: white;
+        margin: 0 auto;
+        border-radius: 8px;
+    }
+
+    /* Individual stat box */
+    .stat-box {
+        text-align: center;
+        flex: 1;
+    }
+
+    /* Icon styles */
+    .stat-icon {
+        font-size: 30px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    /* Text styles */
+    .stat-text {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #strategy {
+        background-color: #f9f9f9; /* Light background for contrast */
+        padding: 40px 20px; /* Spacing around the content */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        margin: 20px auto; /* Center the section and add top margin */
+        text-align: center; /* Align text to the center for better readability */
+    }
+
+    #strategy h2 {
+        font-size: 2rem; /* Size for main headings */
+        color: #003366;  /* Primary color for headings */
+        margin-bottom: 20px; /* Space below the heading */
+        font-weight: 600; /* Make the heading bolder */
+    }
+
+    .strategies {
+        margin-bottom: 30px; /* Space below the strategies section */
+    }
+
+    .strategies h3 {
+        font-size: 1.5rem; /* Size for the strategies heading */
+        color: #333; /* Dark color for subheadings */
+        margin-bottom: 10px; /* Space below the subheading */
+    }
+
+    .strategies ul {
+        list-style-type: disc; /* Bullet points for list */
+        padding-left: 20px;
+        /* Indent list items */
+    }
+
+    .strategies li {
+        font-size: 1.1rem; /* Font size for list items */
+        color: #555; /* Medium gray for list item text */
+        margin-bottom: 10px; /* Space between list items */
+    }
+
+    #strategy button {
+        background-color:#003366; /* Button background color */
+        color: #fff; /* Button text color */
+        border: none; /* No border for button */
+        padding: 10px 20px; /* Padding inside button */
+        border-radius: 4px; /* Rounded corners for button */
+        cursor: pointer; /* Pointer cursor on hover */
+    }
+
+    #strategy button:hover {
+        background-color: #0f1f9a; /* Darker shade on hover */
+    }
+
+    .table-container {
+        overflow-x: auto;
+        margin-top: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table, th, td {
+        border: 1px solid #ccc;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    th {
+        background-color: #f9f9f9;
+        font-weight: bold;
+    }
+
+    td {
+        background-color: #ffffff;
+    }
+
+    th.company-header {
+        background-color: #cceeff; /* Light blue for company header */
+        color: #003366; /* Darker blue text for contrast */
+        font-weight: bold;
+    }
+
+    td.highlight {
+        background-color: #e6f7ff; /* Light blue for highlighting */
+        font-weight: bold;
+    }
+
+
+    table tr:nth-child(even) td {
+        background-color: #c8d7ff27;
+    }
+    .calc-content {
+        display: flex
+        ;justify-content: space-around
+        ;align-items: center;
+    }
+    .calc-input-div {
+        max-width: 500px; /* Limit the width of the input div */
+        margin: 20px ; /* Center the div horizontally */
+        padding: 20px;
+        border: 1px solid #ccc; /* Light border around the div */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        background-color: #f9f9f9; /* Light background color */
+    }
+
+    label {
+        display: block; /* Make label block elements */
+        margin-bottom: 5px; /* Space between label and input */
+        font-weight: bold; /* Bold labels */
+    }
+
+    .input-group {
+        display: flex; /* Use flexbox for layout */
+        justify-content: space-between; /* Space between inputs */
+        align-items: center; /* Center align items vertically */
+        margin-bottom: 15px; /* Space between input groups */
+    }
+
+    input[type="number"] {
+        flex: 1; /* Allow inputs to grow */
+        padding: 10px; /* Padding inside inputs */
+        margin:0px 10px; /* Space between inputs */
+        border: 1px solid #ccc; /* Border around inputs */
+        border-radius: 5px; /* Rounded corners for inputs */
+        width: 9em;
+    }
+    #result {
+        margin-top: 15px; /* Space above result paragraph */
+        font-size: 1.2em; /* Larger font for result */
+        font-weight: bold; /* Bold result text */
+    }
+    /* Error message styling */
+    .result-error {
+        font-size: 0.8em !important;
+        font-weight: 400 !important;
+        color: red; /* Red color for error messages */
+    }
+    #client-Feedback,#faq {
+        text-align: center;
+        padding: 3em;
+        background-color: #f9f9f9; /* Light background for contrast */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        margin: 20px auto; /* Center the section and add top margin */
+    
+    }
+
+    /* Feedback card styling */
+    .feedback-card {
+        display: none;
+        color: #003366;
+        font-size: 1.1em;
+        line-height: 1.6;
+        font-style: italic;
+        padding: 1.5em;
+        border-radius: 12px;
+        background-color: #f0f4f8;
+        margin: 0 auto;
+        max-width: 600px;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        opacity: 0;
+    }
+
+    .feedback-card.active {
+        display: block;
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    .client-name {
+        margin-top: 1em;
+        color: #333;
+        font-weight: bold;
+        font-size: 1.15em;
+    }
+
+    /* Navigation arrows */
+    .nav-arrows {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .arrow {
+        cursor: pointer;
+        font-size: 1.7em;
+        color: #003366;
+        pointer-events: all;
+        transition: color 0.3s ease;
+    }
+
+    .arrow:hover {
+        color: #0055b3;
+    }
+
+    .arrow-left {
+        left: -0.5em;
+    }
+
+    .arrow-right {
+        right: -0.5em;
+    }
+    .faq-item {
+        border-top: 1px solid #e0e0e0;
+        padding-top: 1rem;
+    }
+
+    .faq-item h3 {
+        color: #003366;
+        font-weight: bold;
+        text-align: left;
+    }
+    .faq-item p {
+        text-align: left;
+    }
+
+    #contact {
+        background-color: #003366;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-heading {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        
+    }
+    .footer-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+        gap: 20%; /* Add space between elements */
+    }
+    .footer-logo {
+        width: 12em  ; /* Smaller logo size */
+        height: 10em;
+        margin: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow for modern effect */
+    }
+
+
+   .footer-content {
+    max-width: 400px;
+    text-align: center; /* Left-align on larger screens */
+}
+    #contact p {
+        margin: 5px 0;
+        font-size: 1.1em;
+        color: white;
+    }
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        /* Adjust header and navigation for mobile */
+        header {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            flex-direction: column;
+            padding: 1rem;
+            height: auto;
+        }
+
+        nav img {
+            width: 50vw;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+
+        nav ul li {
+            margin: 0.5rem 0;
+        }
+
+        /* Home Section */
+        #home {
+            padding: 2rem 1rem;
+        }
+
+        #home h1 {
+            font-size: 1.5rem;
+        }
+
+        #home h4 {
+            font-size: 1rem;
+        }
+
+        #home ul li {
+            font-size: 0.9rem;
+        }
+
+        #home button {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Stats Section */
+        .stats-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .stat-box {
+            margin-bottom: 1rem;
+        }
+
+        /* Table */
+        th, td {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* Input Div */
+        .calc-input-div {
+            width: 90%;
+            margin: 20px auto;
+            padding: 15px;
+        }
+
+        /* Feedback and FAQ Sections */
+        #client-Feedback, #faq {
+            padding: 2rem;
+        }
+
+        .feedback-card {
+            font-size: 1rem;
+            padding: 1rem;
+        }
+
+        .nav-arrows {
+            font-size: 1.5em;
+        }
+
+        /* Strategy Section */
+        #strategy h2 {
+            font-size: 1.8rem;
+        }
+
+        .strategies h3 {
+            font-size: 1.2rem;
+        }
+
+        .strategies ul {
+            padding-left: 1rem;
+        }
+
+        .strategies li {
+            font-size: 1rem;
+        }
+
+        #strategy button {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+    }
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .stats-container {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .calc-input-div,
+        .feedback-card,
+        .table-container {
+            width: 90%;
+            margin: 20px auto;
+        }
+        .calc-content {
+            display: block !important;
+        }
+        .calc-content img{
+            width: 89.5vw !important;
+        }
+/* Footer styling  */
+        .footer-info {
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-logo {
+            width: 7em  ;
+            height: auto;
+        }
+        .footer-content {
+            text-align: center; /* Center-align on smaller screens */
+            margin: 0;
+        }
+    }
+    @media (max-width: 400px) {
+        .footer-heading {
+            font-size: 1.5em; /* Adjust font size on very small screens */
+        }
+        .footer-info {
+            flex-direction: column; /* Stack items vertically on smaller screens */
+            align-items: center;
+        }
+        /* .footer-logo {
+            width: 7em  ;
+            height: auto;
+        } */
+        #contact p {
+            font-size: 1em; /* Adjust font size of paragraphs */
+        }
+    }
+
+    /* Basic mobile adjustments for screens below 400px */
+@media (max-width: 400px) {
+    /* General adjustments */
+    body, p, h1, h2, h3, h4 {
+        font-size: 0.9em; /* Reduce font size for readability on smaller screens */
+    }
+
+    /* Header and navigation */
+    header {
+        padding: 0.5rem;
+    }
+
+    nav img {
+        width: 40vw; /* Further reduce logo size */
+        margin-bottom: 0.5rem;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0.3rem 0;
     }
 
     /* Home Section */
     #home {
-        padding: 2rem 1rem;
+        padding: 1.5rem 0.5rem;
     }
 
     #home h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     #home h4 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     #home ul li {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     #home button {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
     }
 
     /* Stats Section */
     .stats-container {
+        padding: 10px;
         flex-direction: column;
-        text-align: center;
     }
 
     .stat-box {
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
     }
 
-    /* Table */
-    .table-container {
-        overflow-x: auto;
-    }
-
-    th, td {
-        padding: 10px;
-        font-size: 14px;
+    /* Table adjustments */
+    table, th, td {
+        font-size: 0.9rem;
     }
 
     /* Input Div */
     .calc-input-div {
-        width: 90%;
-        margin: 20px auto;
-        padding: 15px;
+        width: 95%;
+        margin: 15px auto;
+        padding: 10px;
     }
 
-    /* Feedback and FAQ Sections */
+    /* Feedback and FAQ sections */
     #client-Feedback, #faq {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
     .feedback-card {
-        font-size: 1rem;
-        padding: 1rem;
+        font-size: 0.9rem;
+        padding: 0.8rem;
     }
 
     .nav-arrows {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     /* Strategy Section */
     #strategy h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .strategies h3 {
-        font-size: 1.2rem;
-    }
-
-    .strategies ul {
-        padding-left: 1rem;
-    }
-
-    .strategies li {
         font-size: 1rem;
     }
 
-    #strategy button {
-        padding: 8px 16px;
+    .strategies ul {
+        padding-left: 0.8rem;
+    }
+
+    .strategies li {
         font-size: 0.9rem;
     }
-}
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        padding: 0;
+
+    #strategy button {
+        padding: 7px 14px;
+        font-size: 0.8rem;
     }
 
-    .stats-container {
-        flex-direction: column;
-        padding: 10px;
+    /* Footer */
+    .footer-heading {
+        font-size: 1.3em;
     }
 
-    .calc-input-div,
-    .feedback-card,
-    .table-container {
-        width: 90%;
-        margin: 20px auto;
+    #contact p {
+        font-size: 0.9em;
     }
-    .calc-content {
-        display: block !important;
+
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
     }
-    .calc-content img{
-        width: auto !important;
+
+    .footer-content {
+        text-align: center;
+        margin: 0;
     }
 }
