@@ -456,7 +456,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+        /* flex-wrap: wrap; */
+        /* Allow content to wrap on smaller screens */
         gap: 20%; /* Add space between elements */
     }
     .footer-logo {
